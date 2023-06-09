@@ -15,7 +15,10 @@ SQL Server Management Studio - https://learn.microsoft.com/pt-BR/sql/ssms/downlo
 Dentro do Visual Studio será necessário instalar as dependencias:
 
 MicrosoftEntityFramework.Core
+
 MicrosoftEntityFramework.SQLServer
+
 MicrosoftEntityFramework.Design
+
 MicrosoftEntityFramework.Tools
 
