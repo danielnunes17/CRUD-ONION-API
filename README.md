@@ -1,8 +1,8 @@
 # CRUD-ONION-API
 
-# ATEÇÃO
+# ATENÇÃO
 
-Para rodar essa aplicação é necessário a instalação:
+## Para rodar essa aplicação é necessário a instalação:
 
 Visual Studio 2022 - https://visualstudio.microsoft.com/pt-br/vs/
 
@@ -15,7 +15,10 @@ SQL Server Management Studio - https://learn.microsoft.com/pt-BR/sql/ssms/downlo
 Dentro do Visual Studio será necessário instalar as dependencias:
 
 MicrosoftEntityFramework.Core
+
 MicrosoftEntityFramework.SQLServer
+
 MicrosoftEntityFramework.Design
+
 MicrosoftEntityFramework.Tools
 
