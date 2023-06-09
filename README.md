@@ -1,8 +1,8 @@
 # CRUD-ONION-API
 
-# ATEÇÃO
+# ATEnÇÃO
 
-Para rodar essa aplicação é necessário a instalação:
+## Para rodar essa aplicação é necessário a instalação:
 
 Visual Studio 2022 - https://visualstudio.microsoft.com/pt-br/vs/
 
