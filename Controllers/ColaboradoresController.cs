@@ -31,8 +31,8 @@ namespace CRUD_ONION_API.Controllers
                 return Ok(obj);
             }
         }
-        [HttpGet(nameof(Obter))]
-        public IActionResult Obter()
+        [HttpGet(nameof(ObterTodos))]
+        public IActionResult ObterTodos()
         {
             var obj = _customService.GetAll();
             if (obj == null)
@@ -86,7 +86,6 @@ namespace CRUD_ONION_API.Controllers
             _applicationDbContext.Colaborador.Remove(colaborador);
             _applicationDbContext.SaveChanges();
             return Ok("Colaborador removido da base de dados");
-
         }
     }
 }

@@ -31,8 +31,9 @@ namespace CRUD_ONION_API.Controllers
                 return Ok(obj);
             }
         }
-        [HttpGet(nameof(Obter))]
-        public IActionResult Obter()
+
+        [HttpGet(nameof(ObterTodos))]
+        public IActionResult ObterTodos()
         {
             var obj = _customService.GetAll();
             if (obj == null)
@@ -85,7 +86,6 @@ namespace CRUD_ONION_API.Controllers
             _applicationDbContext.Empresa.Remove(empresa);
             _applicationDbContext.SaveChanges();
             return Ok("Emepresa removida da base de dados");
-
         }
     }
 }
