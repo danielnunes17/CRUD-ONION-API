@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CRUD_ONION_API.Controllers
 {
+    [Route("[controller]")]
+    [ApiController]
     public class ColaboradoresController : ControllerBase
     {
         private readonly ICustomService<Colaboradores> _customService;
@@ -22,7 +24,7 @@ namespace CRUD_ONION_API.Controllers
             var obj = _customService.Get(Id);
             if (obj == null)
             {
-                return NotFound();
+                return NotFound("Erro ao obter colaborador");
             }
             else
             {
@@ -35,7 +37,7 @@ namespace CRUD_ONION_API.Controllers
             var obj = _customService.GetAll();
             if (obj == null)
             {
-                return NotFound();
+                return NotFound("Erro ao obter lista de colaboradores");
             }
             else
             {
@@ -67,7 +69,7 @@ namespace CRUD_ONION_API.Controllers
             }
             else
             {
-                return BadRequest();
+                return BadRequest("Erro ao atualizar dados do colaborador");
             }
 
         }
@@ -78,7 +80,7 @@ namespace CRUD_ONION_API.Controllers
             var colaborador = _applicationDbContext.Colaborador.FirstOrDefault(x => x.Codigo == id);
             if (colaborador == null)
             {
-                return NotFound();
+                return NotFound("Erro ao remover colaborador");
             }
 
             _applicationDbContext.Colaborador.Remove(colaborador);

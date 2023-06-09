@@ -24,7 +24,7 @@ namespace CRUD_ONION_API.Controllers
             var obj = _customService.Get(Id);
             if (obj == null)
             {
-                return NotFound();
+                return NotFound("Erro ao obter empresa");
             }
             else
             {
@@ -37,7 +37,7 @@ namespace CRUD_ONION_API.Controllers
             var obj = _customService.GetAll();
             if (obj == null)
             {
-                return NotFound();
+                return NotFound("Erro ao obter lista de empresas");
             }
             else
             {
@@ -69,9 +69,8 @@ namespace CRUD_ONION_API.Controllers
             }
             else
             {
-                return BadRequest();
+                return BadRequest("Erro ao atualizar dados da empresa");
             }
-
         }
 
         [HttpDelete(nameof(Delete))]
@@ -80,7 +79,7 @@ namespace CRUD_ONION_API.Controllers
             var empresa = _applicationDbContext.Empresa.FirstOrDefault(x => x.Codigo == id);
             if (empresa == null)
             {
-                return NotFound();
+                return NotFound("Erro criar empresa");
             }
 
             _applicationDbContext.Empresa.Remove(empresa);
